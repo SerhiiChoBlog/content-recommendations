@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use App\Models\Post;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -19,7 +18,6 @@ class TagFactory extends Factory
     {
         return [
             'name' => $this->faker->word(),
-            'post_id' => Post::factory(),
         ];
     }
 }
