@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         $user = User::factory()->create();
 
-        $posts = Post::factory(1000)->create(['user_id' => $user]);
+        $posts = Post::factory(10_000)->create(['user_id' => $user]);
 
         $tags = collect([
             Tag::factory()->create(['name' => 'Laravel'])->id,
@@ -40,6 +40,18 @@ class DatabaseSeeder extends Seeder
             Tag::factory()->create(['name' => 'Fortify'])->id,
             Tag::factory()->create(['name' => 'Sail'])->id,
             Tag::factory()->create(['name' => 'Nova'])->id,
+            Tag::factory()->create(['name' => 'Forge'])->id,
+            Tag::factory()->create(['name' => 'Vapor'])->id,
+            Tag::factory()->create(['name' => 'Envoyer'])->id,
+            Tag::factory()->create(['name' => 'Spark'])->id,
+            Tag::factory()->create(['name' => 'Cashier'])->id,
+            Tag::factory()->create(['name' => 'Dusk'])->id,
+            Tag::factory()->create(['name' => 'Horizon'])->id,
+            Tag::factory()->create(['name' => 'Sanctum'])->id,
+            Tag::factory()->create(['name' => 'Scout'])->id,
+            Tag::factory()->create(['name' => 'Socialite'])->id,
+            Tag::factory()->create(['name' => 'Telescope'])->id,
+            Tag::factory()->create(['name' => 'Tinker'])->id,
         ]);
 
         $posts->each(function (Post $post) use ($tags) {
