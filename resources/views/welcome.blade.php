@@ -17,7 +17,7 @@
         </style>
     </head>
     <body>
-        <h1>Recommendation Posts</h1>
+        <h1>Posts</h1>
 
         <ul>
             @forelse ($posts as $post)
